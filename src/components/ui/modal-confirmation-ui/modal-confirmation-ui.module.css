@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.confirm_button:hover, .confirm_button:focus-visible {
+  background-color: #8fd14f;
+  border-color: #8fd14f;
+
+}
+
+.reject_button:hover, .reject_button:focus-visible {
+  background-color: #ff6600;
+  border-color: #ff6600;
+
+}

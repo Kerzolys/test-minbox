@@ -1,0 +1,128 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  transition: background-color 0.2s ease;
+  padding: 0px 10px;
+  border-radius: 4px;
+}
+
+.container:hover {
+  background-color: #604cc379;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.todo {
+  cursor: pointer;
+  text-align: center;
+  margin-block: 15px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+label .checkbox {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input + .checkbox {
+  position: relative;
+  inline-size: 13px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.input + .checkbox::before,
+.input + .checkbox::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #000;
+  transition: transform 0.3s ease;
+  inset-inline-start: 6px;
+}
+
+.input:checked + .checkbox::before,
+.input:focus-visible + .checkbox::before,
+.input:hover + .checkbox::before {
+  transform: rotate(-26deg) translateX(-3px);
+}
+.input:checked + .checkbox::after,
+.input:focus-visible + .checkbox::after,
+.input:hover + .checkbox::after {
+  transform: rotate(26deg) translateX(3px);
+}
+
+.input + .checkbox:focus {
+  outline: none;
+}
+
+.input:checked + .checkbox,
+.input:focus-visible + .checkbox {
+  border: 1px solid #8fd14f;
+}
+
+.button {
+  position: relative;
+  inline-size: 15px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  background-color: #fff;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 1px;
+  background-color: #000;
+  transition: transform 0.2s ease;
+  inset-inline-start: 1px;
+}
+
+.button:hover::before,
+.button:focus-visible::before {
+  transform: rotate(45deg);
+}
+.button:hover::after,
+.button:focus-visible::after {
+  transform: rotate(-45deg);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible, .button:hover {
+  border: 1px solid #ff6600;
+}

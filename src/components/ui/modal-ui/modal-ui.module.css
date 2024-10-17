@@ -1,0 +1,92 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.opened {
+  transition: visibility 0.3s, opacity 0.3s;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+  display: flex;
+}
+
+.closed {
+  transition: visibility 0.3s, opacity 0.3s;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.close_button {
+  position: absolute;
+  inset-block-start: -35px;
+  inset-inline-end: 0;
+  inline-size: 30px;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+}
+
+.close_button:hover {
+  background-color: transparent;
+}
+
+.close_button::before,
+.close_button::after {
+  content: "";
+  position: absolute;
+  inline-size: 100%;
+  block-size: 5px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #000;
+  transition: transform 0.3s ease;
+  inset-inline-start: -1px;
+  inset-block-start: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.close_button:focus-visible::before,
+.close_button:hover::before {
+  transform: rotate(-45deg);
+}
+
+.close_button:focus-visible::after,
+.close_button:hover::after {
+  transform: rotate(45deg);
+}
+
+.close_button:focus {
+  outline: none;
+}
+
+.close_button:focus-visible {
+  border: 1px solid rgba(255, 0, 0, 0.543);
+}
+
+.content {
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 0 auto;
+  block-size: min(100px);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}

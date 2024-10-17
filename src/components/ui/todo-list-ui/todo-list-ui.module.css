@@ -1,0 +1,10 @@
+.list {
+  margin: 0;
+  padding: 0;
+  margin-block: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+}

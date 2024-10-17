@@ -1,0 +1,9 @@
+.App {
+  margin: 0 auto;
+  max-inline-size: 50vw;
+  border: 1px solid #604CC3;
+  border-radius: 4px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  /* padding: 10px; */
+  /* background-color: #F5F5F5; */
+}
